@@ -12,6 +12,11 @@ path = 'path/to/GoogleNews-vectors-negative300.bin.gz'
 model = KeyedVectors.load_word2vec_format(path, binary=True)
 ```
 
+Limit model size while loading
+```
+model = KeyedVectors.load_word2vec_format(path, binary=True, limit=20000)
+```
+
 Word2Vec supports several word similarity tasks out of the box:
 ```
 model.most_similar(positive=['woman', 'king'], negative=['man'], topn=1)
